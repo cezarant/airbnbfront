@@ -55,7 +55,7 @@ class cardA extends Component{
         <p>Selected : {this.state.selectedCardType}</p>
         {data.reviews.filter(review => review.room_type === 'Shared room').map(({ _id, name, beds }) =>
         (
-            <li key={_id}>
+            <li key={_id}>              
                 {name} - Qtd. of Beds<b>{beds}</b>
             </li>
         ))}
