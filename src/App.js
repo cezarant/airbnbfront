@@ -6,6 +6,7 @@ import {
   ApolloProvider  
 } from "@apollo/client";
 import ListOfReviews from './components/ListofReviews'
+import SummaryOfReviews from './components/SummaryOfReviews';
 
 const client = new ApolloClient({
   uri: "https://airbnbacomodations.herokuapp.com/",
