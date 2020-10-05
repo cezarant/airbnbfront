@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import {
     ApolloClient,
     InMemoryCache,
@@ -18,12 +17,13 @@ const GET_REVIEWS = gql`
       bedrooms
     }
   }`;
-
+const dotenv = require('dotenv');
+dotenv.config();
 const client = new ApolloClient({
     uri: process.env.URL_API,
     cache: new InMemoryCache()
 });
-
+console.log('Teste',process.env.URL_API); 
 class dpCards extends Component {
     constructor() {
         super()
@@ -33,6 +33,8 @@ class dpCards extends Component {
         this.getdropdown = this.getdropdown.bind(this);
     }    
     getdropdown() {
+        const dotenv = require('dotenv');
+        dotenv.config();        
         const { loading, error, data } = useQuery(GET_REVIEWS);
         if (loading) return <p>Loading...</p>;
         if (error) return <p>Error :(</p>;

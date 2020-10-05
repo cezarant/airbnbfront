@@ -32,9 +32,10 @@ const headerImg = {
   position: 'relative',
   zIndex: 500
 };
-
+const dotenv = require('dotenv');
+dotenv.config();
 const client = new ApolloClient({
-  uri: "https://airbnbserver.herokuapp.com/",
+  uri:  process.env.URL_API,
   cache: new InMemoryCache()
 }); 
 
