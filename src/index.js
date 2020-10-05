@@ -10,9 +10,10 @@ import AngryJoe from './components/AngryJoe';
 import Dropdowncards from './components/cards/dropdown/dropdown';
 import * as Cards from './components/cards';
 import { useQuery, gql } from "@apollo/client";
-
+const dotenv = require('dotenv');
+dotenv.config();
 const client = new ApolloClient({
-  uri: 'https://airbnbacomodations.herokuapp.com/',
+  uri: process.env.URL_API,
   cache: new InMemoryCache()
 }); 
 

@@ -20,7 +20,7 @@ const GET_REVIEWS = gql`
   }`;
 
 const client = new ApolloClient({
-    uri: 'https://airbnbacomodations.herokuapp.com/',
+    uri: process.env.URL_API,
     cache: new InMemoryCache()
 });
 
