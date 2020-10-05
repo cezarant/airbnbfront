@@ -20,10 +20,9 @@ const GET_REVIEWS = gql`
 const dotenv = require('dotenv');
 dotenv.config();
 const client = new ApolloClient({
-    uri: process.env.URL_API,
+    uri: 'https://airbnbserver.herokuapp.com/',
     cache: new InMemoryCache()
 });
-console.log('Teste',process.env.URL_API); 
 class dpCards extends Component {
     constructor() {
         super()
