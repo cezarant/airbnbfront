@@ -12,7 +12,7 @@ import * as Cards from './components/cards';
 import { useQuery, gql } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: 'https://airbnbacomodations.herokuapp.com/',
+  uri: 'https://airbnbserver.herokuapp.com/',
   cache: new InMemoryCache()
 }); 
 
