@@ -32,41 +32,13 @@ class ListOfReviews extends Component {
       }, {}))
 
     return <div>
-      <select onChange={(e) => this.setState({ selectedCardType: e.target.value })}>  
-        {tiposAcomodacao.map(vReview => {
-          return (<option key={vReview.id} value={vReview.id}>{vReview.room_type}</option>)
-        })}
-      </select>
-      <p>Total of bedrooms: {data.reviews.reduce((start, review) => { return start + review.bedrooms; }, 0)}
-      </p>
-      <h3>Acomodations</h3>
-      <div>
-        <p>Entire Home/Apt</p>
-        <div>
-          {data.reviews.filter(review => review.room_type === 'Entire home/apt').map((
-            { _id, name, beds }) =>
-            (
-              <li key={_id}>
-                {name} - Qtd. of Beds<b>{beds}</b>
-              </li>
-            ))}
-        </div>
-        <p>Private room</p>
-        <div>
-          {data.reviews.filter(review => review.room_type === 'Shared room').map(({ _id, name, beds }) =>
-            (
-              <li key={_id}>
-                {name} - Qtd. of Beds<b>{beds}</b>
-              </li>
-            ))}
-        </div>
+        <p>Teste</p>
       </div>
-    </div>
   }
   render() {
     return (
       <div>
-        <this.GetList />
+        <p>teste</p>
       </div>
     );
   }

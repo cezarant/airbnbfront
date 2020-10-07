@@ -1,41 +1,14 @@
-import {  
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider  
-} from "@apollo/client";
 import React, { Fragment, Component } from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
 import AngryJoe from './components/AngryJoe';
 import Dropdowncards from './components/cards/dropdown/dropdown';
 import * as Cards from './components/cards';
-import { useQuery, gql } from "@apollo/client";
-const dotenv = require('dotenv');
-dotenv.config();
-const client = new ApolloClient({
-  uri: "http://airbnbserver.herokuapp.com/",
-  cache: new InMemoryCache()
-}); 
-
-const GET_REVIEWS = gql`
-{
-  reviews 
-  { 
-    _id           
-    name 
-    listing_url
-    beds
-    room_type 
-    bedrooms
-  }
-}`; 
-
 
 class App extends Component {
   state = {
     selectedCardType: ''
   };
-
 
   render(){
     return (
@@ -43,13 +16,7 @@ class App extends Component {
         <div className="app-bar">
           <h1 className="app-bar-title">Air Bnb Card</h1>
         </div>
-        <section className="app-section container">
-          <Dropdowncards />          
-
-          <div className="top-margin-small">
-            {this.renderSelectedCard(this.state.selectedCardType)}
-          </div>
-        </section>
+        
       </Fragment>
     );
   }
@@ -69,11 +36,7 @@ class App extends Component {
     );
   }
 
-
   renderSelectedCard(selectedCardType) {
-    if (!selectedCardType)
-      return <AngryJoe text="Pick a card style bruh!" />;
-
     const Card = Cards[selectedCardType];   
     return <Card selectedCardType={selectedCardType}  />;
   }

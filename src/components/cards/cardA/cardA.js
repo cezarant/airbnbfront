@@ -64,12 +64,10 @@ class cardA extends Component{
     }
     render(){
        return (
-        <ApolloProvider client={client}>
-         <div>
-            <this.getList  />
-         </div>
-         </ApolloProvider>
-       );
+        <div>
+          <p>Teste</p>
+        </div> 
+        );
     } 
 }
 export default cardA; 

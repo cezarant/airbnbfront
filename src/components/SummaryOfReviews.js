@@ -49,8 +49,10 @@ class SummaryOfReviews extends Component{
         );
     }
     render(){
-        return <div>
-                <getList />
+        return 
+        
+        <div>
+              <p>Teste</p> 
                </div> 
     } 
 }

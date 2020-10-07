@@ -6,8 +6,6 @@ import {
   ApolloProvider  
 } from "@apollo/client";
 import ListOfReviews from './components/ListofReviews'
-import SummaryOfReviews from './components/SummaryOfReviews';
-
 const client = new ApolloClient({
   uri: "http://airbnbserver.herokuapp.com/",
   cache: new InMemoryCache()
@@ -15,10 +13,8 @@ const client = new ApolloClient({
 
 function App() {  
   return (
-    <ApolloProvider client={client}>
-       <div>
-         <ListOfReviews />        
-      </div>    
-    </ApolloProvider>);    
+    <div>
+      <p>Algo</p>
+    </div>);    
 }
 export default App;
