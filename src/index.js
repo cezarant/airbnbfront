@@ -13,7 +13,7 @@ import { useQuery, gql } from "@apollo/client";
 const dotenv = require('dotenv');
 dotenv.config();
 const client = new ApolloClient({
-  uri: "https://airbnbserver.herokuapp.com/",
+  uri: "http://airbnbserver.herokuapp.com/",
   cache: new InMemoryCache()
 }); 
 

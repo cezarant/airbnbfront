@@ -9,7 +9,7 @@ import ListOfReviews from './components/ListofReviews'
 import SummaryOfReviews from './components/SummaryOfReviews';
 
 const client = new ApolloClient({
-  uri: "https://airbnbserver.herokuapp.com/",
+  uri: "http://airbnbserver.herokuapp.com/",
   cache: new InMemoryCache()
 }); 
 
