@@ -20,6 +20,7 @@ class ListOfReviews extends Component {
     console.log(e);
   }
   GetList() {
+    console.log('Teste');
     const { loading, error, data } = useQuery(GET_REVIEWS);
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error :(</p>;
